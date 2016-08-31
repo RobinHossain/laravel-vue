@@ -1,5 +1,7 @@
 <?php
 
+use App\Message;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,8 +13,9 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::auth();
@@ -22,3 +25,14 @@ Route::get('/home', 'HomeController@index');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+// Using API
+
+Route::get('api/messages', function(){
+   return Message::all();
+});
+
+Route::post('api/messages', function(){
+    return Message::create(Request::all());
+});

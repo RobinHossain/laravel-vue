@@ -5,3 +5,5 @@ body {
 .fa-btn {
     margin-right: 6px;
 }
+
+.error { font-weight: bold; color: red; }
