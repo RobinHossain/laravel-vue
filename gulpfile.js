@@ -50,7 +50,7 @@ elixir(function(mix) {
 
 
 elixir(function(mix) {
- mix.scripts(['jquery.js', 'bootstrap.js'], 'public/js/app.js')
+ mix.scripts(['jquery.js', 'bootstrap.js', 'vendor.js', 'guestbook.js'], 'public/js/app.js')
 });
 
 elixir(function(mix) {
